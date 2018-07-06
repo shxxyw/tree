@@ -145,7 +145,14 @@ class Expression_Tree extends BinaryTreeByLinkedList{
 			int secondNumber=0;
 			//递归条件出口
 			if(node.left_Node==null && node.right_Node==null)
-				//将节点的值转换成数值后返回
+				/*
+				 * 将节点的值转换成数值后返回
+				 * Character.getNumericValue() 
+				 * 字符类中获取一个字符的数值
+				 * 此方法返回字符的数值，作为一个非负的int值; 
+				 * -2如果字符有一个数值，不是一个非负整数; 
+				 * -1，如果字符没有数值。
+				 */
 				return Character.getNumericValue((char)node.data);
 			else {
 				firstNumber = answer(node.left_Node);//计算左子树
